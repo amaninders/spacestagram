@@ -4,10 +4,10 @@ export default function Navigation() {
   return (
     <nav className="navbar navbar-light bg-warning">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <i className="fas fa-rocket"></i> Spacestagram
         </a>
-        <button className='btn btn-dark'>Likes</button>
+        <a className='btn btn-dark' href="https://github.com/amaninders/spacestagram" target={"_blank"}>Github</a>
       </div>
     </nav>
   )
