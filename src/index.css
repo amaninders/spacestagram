@@ -1,0 +1,26 @@
+.welcome-img {
+  max-width: 60%;
+}
+.card {
+  height: 600px;
+}
+
+.card-img-top {
+  height: 200px;
+}
+.card-body {
+  height: 400px
+}
+
+.card-title {
+  height: 100px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.card-text::-webkit-scrollbar {
+  display: none;
+}
+.card-text {
+  height: 200px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
