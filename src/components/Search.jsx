@@ -11,11 +11,11 @@ export class Search extends Component {
 
   render() {
     return (
-      <form className="container mt-3 mb-3 input-group mb-3" onSubmit={this.onFormSubmit}>
+      <form id="search" className="container mt-5 mb-3 input-group mb-3 w-50" onSubmit={this.onFormSubmit}>
         <input 
           type="text" 
           className="form-control" 
-          placeholder="search" 
+          placeholder="search your favorite images from the space ...." 
           value={this.state.search}
           onChange={e => this.setState({search: e.target.value})}
         />

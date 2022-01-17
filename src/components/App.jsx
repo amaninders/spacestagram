@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { ToastContainer } from 'react-toastify';
 import nasa from '../api/nasa.js';
 import Grid from './Grid'
 import Navigation from './Navigation'
@@ -6,9 +7,12 @@ import Search from './Search'
 import Welcome from './Welcome'
 
 export default class App extends Component {
+
   state = { 
     images: [],
-    error: '' };
+    error: false,
+    likes: []
+  };
 
   onSearchSubmit = async term => {
     const response = await nasa.get('search', {
@@ -16,8 +20,7 @@ export default class App extends Component {
     });
     
     this.setState({ images: response.data.collection.items })
-
-    this.state.images.length ? this.setState({ error: '' }) : this.setState({ error: 'no images found' });
+    this.state.images.length ? this.setState({ error: '' }) : this.setState({ error: true });
   };
 
   render() {
@@ -25,9 +28,18 @@ export default class App extends Component {
       <div className='container-fluid'>
         <Navigation />
         <Search onSubmit={this.onSearchSubmit} />
-        { this.state.error ? <h1 className='text-center text-danger'>No Images Found</h1> : null }
+        { this.state.error ? <h1 className='text-center text-light mt-5'>No Images Found</h1> : null }
         { this.state.images.length ? null :  <Welcome />}
-        { this.state.images.length ? <Grid images={this.state.images}/> : null }
+        { this.state.images.length ? <Grid images={this.state.images} /> : null }
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          draggable
+          />
       </div>
     )
   }

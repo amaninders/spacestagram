@@ -1,26 +1,26 @@
-.welcome-img {
-  max-width: 60%;
-}
-.card {
-  height: 600px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Bungee+Hairline&family=Montserrat:wght@200;300&family=Nunito:wght@200;300;900&family=Oswald:wght@200;500;700&family=Outfit:wght@300;500;900&display=swap');
 
-.card-img-top {
-  height: 200px;
-}
-.card-body {
-  height: 400px
+body {
+  background-color: darkslategray;
+  background-image: url(https://data.whicdn.com/images/332907756/original.gif);
 }
 
 .card-title {
-  height: 100px;
+  font-family: 'Bungee', cursive;
 }
-/* Hide scrollbar for Chrome, Safari and Opera */
-.card-text::-webkit-scrollbar {
-  display: none;
+
+.navbar-brand {
+  font-family: 'Bungee', cursive;
 }
-.card-text {
-  height: 200px;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+
+.welcome-img {
+  max-width: 60%;
+}
+
+.btn {
+  font-family: 'Bungee', cursive;
+}
+
+#search {
+  font-family: 'Bungee', cursive;
 }
