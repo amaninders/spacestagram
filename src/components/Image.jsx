@@ -12,20 +12,20 @@ function Image(props) {
     toast(message)
   };
 
-  const [cls, setCls] = useState("btn btn-outline-dark")
+  const [cls, setCls] = useState("btn btn-success")
   const [likeText, setLikeText] = useState("like")
 
   return (
     <div className="p-3">
       <div className="card text-center">
         <img src={props.src} className="card-img-top" alt="..." />
-        <div className="card-body" style={{'backgroundColor':randomColor({luminosity: 'light', hue: 'yellow', alpha: 0.1})}}>
+        <div className="card-body" style={{'backgroundColor': 'white'}}>
           <h5 className="card-title">{props.title}</h5>
           <p>{ humanDate(props.date)}</p>
           <p className="card-text overflow-auto">{props.description}</p>
           <div className="d-grid gap-2">
-            <button className={cls} onClick={() => { if(likeText === "like") notify('Liked 👍') ; setCls((cls) => (cls === "btn btn-outline-dark" ? "btn btn-success" : "btn btn-outline-dark")) ; setLikeText((likeText) => (likeText === "unlike" ? "like" : "unlike"))}}><i className="fas fa-heart"></i> {likeText}</button>
-            <button className="btn btn-outline-dark" onClick={ () => { notify('link copied 📋'); copy(props.src);} }><i class="far fa-copy"></i> copy url</button>
+            <button className={cls} onClick={() => { if(likeText === "like") notify('Liked 👍') ; setCls((cls) => (cls === "btn btn-success" ? "btn btn-danger" : "btn btn-success")) ; setLikeText((likeText) => (likeText === "unlike" ? "like" : "unlike"))}}><i className="fas fa-heart"></i> {likeText}</button>
+            <button className="btn btn-dark" onClick={ () => { notify('link copied 📋'); copy(props.src);} }><i class="far fa-copy"></i> copy url</button>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className='container-fluid'>
+      <div className='container-fluid ps-0 pe-0'>
         <Navigation />
         <Search onSubmit={this.onSearchSubmit} />
         { this.state.error ? <h1 className='text-center text-light mt-5'>No Images Found</h1> : null }
