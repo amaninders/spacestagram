@@ -24,7 +24,7 @@ function Image(props) {
           <p>{ humanDate(props.date)}</p>
           <p className="card-text overflow-auto">{props.description}</p>
           <div className="d-grid gap-2">
-            <a href="#" className={cls} onClick={() => { if(likeText === "like") notify('Liked 👍') ; setCls((cls) => (cls === "btn btn-outline-dark" ? "btn btn-success" : "btn btn-outline-dark")) ; setLikeText((likeText) => (likeText === "unlike" ? "like" : "unlike"))}}><i className="fas fa-heart"></i> {likeText}</a>
+            <button className={cls} onClick={() => { if(likeText === "like") notify('Liked 👍') ; setCls((cls) => (cls === "btn btn-outline-dark" ? "btn btn-success" : "btn btn-outline-dark")) ; setLikeText((likeText) => (likeText === "unlike" ? "like" : "unlike"))}}><i className="fas fa-heart"></i> {likeText}</button>
             <button className="btn btn-outline-dark" onClick={ () => { notify('link copied 📋'); copy(props.src);} }><i class="far fa-copy"></i> copy url</button>
           </div>
         </div>
