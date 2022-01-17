@@ -19,7 +19,7 @@ function Image(props) {
     <div className="p-3">
       <div className="card text-center">
         <img src={props.src} className="card-img-top" alt="..." />
-        <div className="card-body" style={{'backgroundColor': 'white'}}>
+        <div className="card-body" style={{'backgroundColor':randomColor({luminosity: 'light', hue: 'yellow', alpha: 0.1})}}>
           <h5 className="card-title">{props.title}</h5>
           <p>{ humanDate(props.date)}</p>
           <p className="card-text overflow-auto">{props.description}</p>
