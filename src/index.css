@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Bungee+Hairline&family=Montserrat:wght@200;300&family=Nunito:wght@200;300;900&family=Oswald:wght@200;500;700&family=Outfit:wght@300;500;900&display=swap');
 
 body {
-  background-color: lightsteelblue;
+  background-color: #3C444D;
   background-image: url(https://data.whicdn.com/images/332907756/original.gif);
 }
 
@@ -25,5 +25,9 @@ body {
 }
 
 #search {
+  font-family: 'Bungee', cursive;
+}
+
+.custom-date {
   font-family: 'Bungee', cursive;
 }
