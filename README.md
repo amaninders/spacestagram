@@ -13,3 +13,6 @@ This is a react project created for the Shopify Frontend Challenge
 - You can like/dislike an image from the results
 - You can copy to clipboard the image link
 - Action notification toasts in the browser for like and copy
+
+### Resources
+- Color Palette from [Coolors](https://coolors.co/palette/27292b-343b43-3c444d-dae8f7-c6dbf1-bcd5ef-b2ceec)
